@@ -24,17 +24,13 @@ APPINDICATOR_ID = "top_bar_icon"
 def main():
 	indicator = AppIndicator3.Indicator.new(
 			APPINDICATOR_ID,
-			os.path.abspath("keyboard.svg"),
+			os.path.abspath("icon.svg"),
 			AppIndicator3.IndicatorCategory.SYSTEM_SERVICES)
 	indicator.set_status(AppIndicator3.IndicatorStatus.ACTIVE)
 	indicator.set_menu(menu_build())
 	Notify.init(APPINDICATOR_ID)
 
-	#if user does not belong to the needed group warn user then exit program
-	if neededGroup in groups:
-		systemNotification(main)
-		exit()
-		
+	
  
 
 	Gtk.main()
@@ -78,7 +74,7 @@ def systemNotification(source):
 	
 
 	
-	message = "Your user is not in the {} group! Script will fail if you are not in this group!\nAdd {} to input group to continue. \n\nExiting...".format(neededGroup, user)
+	message = "test notification"
 	Notify.Notification.new("WARNING!!  ", 
 							message,
 							None).show()
