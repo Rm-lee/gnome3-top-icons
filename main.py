@@ -15,24 +15,6 @@ gi.require_version('Notify', '0.7')
 from gi.repository import Notify
 
 
-import sys
-import os
-import subprocess
-import grp, pwd
-import getpass
- 
-#find the group that /dev/input events belong too
-gid = os.stat('/dev/input/event0').st_gid
-neededGroup = grp.getgrgid(gid)[0]
-ready = ""
- 
-#find current user
-user = getpass.getuser()
- 
-#list groups user belongs too
-groups = [g.gr_name for g in grp.getgrall() if user in g.gr_mem]
-gid = pwd.getpwnam(user).pw_gid
-groups.append(grp.getgrgid(gid).gr_name)
  
 
 
