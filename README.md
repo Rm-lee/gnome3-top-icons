@@ -12,3 +12,4 @@
 
 ![screenshot from 2018-10-10 13-58-11](https://user-images.githubusercontent.com/43976537/46756156-c5c44300-cc94-11e8-8539-fa91841b05f4.png)
 
+tested working on Pop!OS 18
