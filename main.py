@@ -29,24 +29,16 @@ def main():
 	indicator.set_status(AppIndicator3.IndicatorStatus.ACTIVE)
 	indicator.set_menu(menu_build())
 	Notify.init(APPINDICATOR_ID)
-
-	
- 
-
 	Gtk.main()
 
 
 def menu_build():
 
 	menu = Gtk.Menu()
-	
-	
 
 	reload_conf = Gtk.MenuItem("Notification Test")
 	reload_conf.connect('activate', systemNotification)
 	menu.append(reload_conf)
-
-
 	device_list = Gtk.Menu()
 	list_item = Gtk.MenuItem("Device List")
 	test_item = Gtk.MenuItem("device1")
