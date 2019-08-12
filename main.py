@@ -5,8 +5,6 @@ import os
 import signal
 import string
 import gi
-
-
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 gi.require_version('AppIndicator3', '0.1') 
@@ -14,12 +12,7 @@ from gi.repository import AppIndicator3
 gi.require_version('Notify', '0.7')
 from gi.repository import Notify
 
-
- 
-
-
 APPINDICATOR_ID = "top_bar_icon"
-
 
 def main():
 	indicator = AppIndicator3.Indicator.new(
@@ -35,7 +28,6 @@ def main():
 def menu_build():
 
 	menu = Gtk.Menu()
-
 	reload_conf = Gtk.MenuItem("Notification Test")
 	reload_conf.connect('activate', systemNotification)
 	menu.append(reload_conf)
@@ -45,18 +37,13 @@ def menu_build():
 	test_item2 = Gtk.MenuItem("device2")
 	test_item3 = Gtk.MenuItem("device3")
 	list_item.set_submenu(device_list)
-
 	list_item.get_submenu().append(test_item)
 	list_item.get_submenu().append(test_item2)
 	list_item.get_submenu().append(test_item3)
-
 	menu.append(list_item)
-	
-
 	item_quit = Gtk.MenuItem("Quit")
 	item_quit.connect('activate', quit)
 	menu.append(item_quit)
-	
 	menu.show_all()
 	
 	return menu
