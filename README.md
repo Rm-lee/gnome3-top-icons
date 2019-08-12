@@ -3,7 +3,7 @@
 
 
 
---note in order to have icons displayed correctly you need one of these extensions kstatusnotifieritem,topicons,topiconsplus installed.
+--note in order to have icons displayed correctly you need one of these gnome extensions ```kstatusnotifieritem```,```topicons```,```topiconsplus``` installed.
 
 
 
